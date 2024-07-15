@@ -13,21 +13,32 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
-
+		<!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+		<![endif]-->
     <!--css time line-->
     <style>
     .horizontal-timeline .items {
       border-top: 3px solid #e9ecef;
     }
-
-    .horizontal-timeline .items .items-list {
+    
+    body{margin-top:20px;}
+    
+    .timeline-steps {
       display: flex;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+    
+    .horizontal-timeline .items .items-list {
+      display: block;
       position: relative;
       text-align: center;
       padding-top: 70px;
       margin-right: 0;
     }
-
+    
     .horizontal-timeline .items .items-list:before {
       content: "";
       position: absolute;
@@ -46,6 +57,7 @@
       font-size: 0.9rem;
       padding-top: 8px;
     }
+    
     @media (min-width: 1140px) {
       .horizontal-timeline .items .items-list {
         display: inline-block;
@@ -57,70 +69,6 @@
         top: -40px;
       }
     }
-
-    body{margin-top:20px;}
-    .timeline-steps {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap
-    }
-
-    .timeline-steps .timeline-step {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        margin: 1rem
-    }
-
-    @media (min-width:768px) {
-        .timeline-steps .timeline-step:not(:last-child):after {
-            content: "";
-            display: block;
-            border-top: .25rem dotted #3b82f6;
-            width: 3.46rem;
-            position: absolute;
-            left: 7.5rem;
-            top: .3125rem
-        }
-        .timeline-steps .timeline-step:not(:first-child):before {
-            content: "";
-            display: block;
-            border-top: .25rem dotted #3b82f6;
-            width: 3.8125rem;
-            position: absolute;
-            right: 7.5rem;
-            top: .3125rem
-        }
-    }
-
-    .timeline-steps .timeline-content {
-        width: 10rem;
-        text-align: center
-    }
-
-    .timeline-steps .timeline-content .inner-circle {
-        border-radius: 1.5rem;
-        height: 1rem;
-        width: 1rem;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #3b82f6
-    }
-
-    .timeline-steps .timeline-content .inner-circle:before {
-        content: "";
-        background-color: #3b82f6;
-        display: inline-block;
-        height: 3rem;
-        width: 3rem;
-        min-width: 3rem;
-        border-radius: 6.25rem;
-        opacity: .5
-    }
-
-
   </style>
     <!--css time line-->
 
@@ -186,7 +134,7 @@
           </nav>
         </div>
       </header>
-     
+
       <!-- Slider-->
       <section class="section" id="home">
         <div class="swiper-container swiper-slider swiper-slider_fullheight" data-simulate-touch="false" data-loop="true" data-autoplay="5000">
@@ -198,7 +146,7 @@
                     <div class="col-lg-7">
                       <h2 data-caption-animate="fadeInUpSmall" data-caption-delay="100">Tuyển sinh thạc sỹ 2024</h2>
                       <h4 class="text-width-4 block-centered" data-caption-animate="fadeInUpSmall" data-caption-delay="200">Chuyên ngành Phân tích kinh doanh <br> Chuyên ngành quản trị hệ thống thông tin.</h4>
-                      <div class="group-lg group-middle"><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="#">Xét tuyển</a></div>
+                      <div class="group-lg group-middle"><a class="button button-black" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="#features" data-custom-scroll-to="features">See Features</a><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="#">Download Now</a></div>
                     </div>
                   </div>
                 </div>
@@ -210,7 +158,7 @@
                   <div class="row justify-content-center">
                     <div class="col-lg-7">
                       <h2 data-caption-animate="fadeInUp" data-caption-delay="100">Chuyên ngành Phân tích kinh doanh</h2>
-                      <h4 data-caption-animate="fadeInUp" data-caption-delay="300"><i class="icon fa fa-check"></i>Xét tuyển thẳng <br> <i class="icon fa fa-check"></i> Xét tuyển theo hồ sơ.</h4><a class="button button-primary" href="#" data-caption-animate="fadeInUp" data-caption-delay="400">Thông tin chương trình </a>
+                      <h4 data-caption-animate="fadeInUp" data-caption-delay="300"><i class="icon fa fa-check"></i>Xét tuyển thẳng <br> <i class="icon fa fa-check"></i> Xét tuyển theo hồ sơ.</h4><a class="button button-primary" href="#" data-caption-animate="fadeInUp" data-caption-delay="400">Live demo</a>
                     </div>
                   </div>
                 </div>
@@ -225,7 +173,7 @@
                       <div class="col-lg-7">
                         <h2 data-caption-animate="fadeInUpSmall" data-caption-delay="100">Chuyên ngành Quản trị hệ thống thông tin</h2>
                         <h4 class="text-width-2 block-centered" data-caption-animate="fadeInUpSmall" data-caption-delay="200"><i class="icon fa fa-check"></i>Xét tuyển thẳng <br> <i class="icon fa fa-check"></i>Xét tuyển theo hồ sơ</h4>
-                        <div class="group-lg group-middle"><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="#">Thông tin chương trình</a></div>
+                        <div class="group-lg group-middle"><a class="button button-black" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="#features" data-custom-scroll-to="features">See Features</a><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="#">Download Now</a></div>
                       </div>
                     </div>
                   </div>
@@ -239,62 +187,24 @@
           <div class="swiper-pagination pagination-mobile"></div>
         </div>
       </section>
-      <!-- Hợp tác triển khai-->
-      <section class="section-md bg-default text-center">
-        <div class="container">
-          <div class="row justify-content-lg-center">
-            <div class="col-lg-10 ">
-              <h3 class="heading-decorated">Hợp tác triển khai</h3>
-              <p>Với mong muốn góp phần đào tạo ra lớp doanh nhân kỷ nguyên số đẳng cấp toàn cầu, 
-                được trang bị những kiến thức và kỹ năng quản trị hệ thống thông tin ưu việt,
-                 cũng như am hiểu sâu sắc về thực tiễn phân tích kinh doanh trong và ngoài nước, 
-                 Khoa CNTT & KTS đã kết hợp với nhiều đối tác hỗ trợ các công nghệ kỹ thuật hiện đại và đưa những chương trình thực tế vào giảng dạy.</p>
-            </div>
-          </div>
-          <div class="row row-50">
-            <div class="col-md-6 col-xl-4">
-              <div class="thumbnail-classic"><a href="#"><img src="images/oracle.jpg" alt="" width="418" height="315"/></a>
-                <div class="caption">
-                  <h5><a class="thumbnail-classic-title" href="#">Kí kết hợp tác Oracle</a></h5>
-                  
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-xl-4">
-              <div class="thumbnail-classic"><a href="#"><img src="images/oracle.jpg" alt="" width="418" height="315"/></a>
-                <div class="caption">
-                  <h5><a class="thumbnail-classic-title" href="#">Hợp tác với 1C</a></h5>
-                 
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-xl-4">
-              <div class="thumbnail-classic"><a href="#"><img src="images/oracle.jpg" alt="" width="418" height="315"/></a>
-                <div class="caption">
-                  <h5><a class="thumbnail-classic-title" href="#">Hợp tác với Bravo</a></h5>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Time-line-->          
-     
+      <!-- Time-line-->
       <section class="section-md bg-default text-center">
         <div class="container">
           <div class="row justify-content-lg-center">
             <div class="col-lg-12 col-xl-8">
               <h3 class="heading-decorated">Thời gian xét tuyển</h3>
-              <p>Timeline tuyển sinh thạc sỹ ngành <b>Phân tích kinh doanh</b> và <b>Quản trị hệ thống thông tin </b>.</p>
+              <p>Time-line tuyển sinh thạc sỹ ngành <b>Phân tích kinh doanh</b> và <b>Quản trị hệ thống thông tin </b>.</p>
             </div>
           </div>
           <!--div class="row row-50"-->
             <div class="container-fluid py-5">
+
               <div class="row">
                 <div class="col-lg-12">
+            
                   <div class="horizontal-timeline">
+            
                     <ul class="list-inline items">
                       <li class="list-inline-item items-list">
                         <div class="px-4">
@@ -350,89 +260,96 @@
           <!--/div-->
         </div>
       </section>
-      <!-- Phương thức xét tuyển-->
-      <section class="section-md bg-default" style="background: #eef4f6;">       
-
+      <!-- Phương thức xét tuyển -->
+       <section class="section-md bg-default text-center">
         <div class="container">
-          <div class="row justify-content-lg-center text-center">
+          <div class="row justify-content-lg-center">
             <div class="col-lg-12 col-xl-8">
-              <h3 class="heading-decorated">Điều kiện dự tuyển</h3>              
+              <h3 class="heading-decorated">Phương thức xét tuyển</h3>
+              <p>Các hình thức xét tuyển.</p>
             </div>
           </div>
-          <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#ycc">Yêu cầu chung</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#xtt">Điều kiện xét tuyển thẳng</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#xths">Điều kiện xét tuyển theo hồ sơ </a>
-            </li>
-          </ul>
-        
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <div id="ycc" class="container tab-pane active"><br>
-              <!-- <h3>Yêu cầu chung</h3> -->
-              <p>a) Đã tốt nghiệp hoặc đã đủ điều kiện công nhận tốt nghiệp đại học (hoặc trình độ tương đương trở lên) ngành đúng, ngành gần với ngành đăng ký dự tuyển; đối với chương trình định hướng nghiên cứu yêu cầu hạng tốt nghiệp từ khá trở lên hoặc có công bố khoa học liên quan đến lĩnh vực sẽ học tập, nghiên cứu;
-                <br>
-                Ngành đúng với ngành dự tuyển bao gồm các ngành trong cùng một nhóm ngành trong Danh mục ngành đào tạo trình độ đại học tại Phụ lục I ban hành kèm theo Thông tư số 09/2022/TT-BGDĐT ngày 06 tháng 6 năm 2022 quy định danh mục thống kê ngành đào tạo của giáo dục đại học.
-                <br>
-                Danh mục ngành gần với ngành dự tuyển xem tại Phụ lục 10 trong thông báo tuyển sinh sau đại học.
-                <br>
-                b) Đã học bổ sung kiến thức (nếu có) theo quy định của Học viện Ngân hàng;
-                <br>
-                c) Lý lịch bản thân rõ ràng và không trong thời gian thi hành án hình sự, được cơ quan quản lý nhân sự nơi đang công tác hoặc chính quyền địa phương nơi cư trú xác nhận;
-                <br>
-                d) Có đủ sức khỏe để học tập;
-                <br>
-                đ) Đáp ứng các yêu cầu khác của chuẩn chương trình đào tạo do Bộ Giáo dục và Đào tạo ban hành và theo quy định của chương trình đào tạo;
-                <br>
-                e) Người dự tuyển nếu có bằng tốt nghiệp đại học do cơ sở đào tạo nước ngoài cấp phải thực hiện thủ tục công nhận văn bằng theo quy định hiện hành của Bộ Giáo dục và Đào tạo.</p>
+          <!--div class="row row-50"-->
+            <div class="container-fluid py-5">
 
+              <div class="row">
+                <div class="col-lg-12">
+            
+                  <div class="horizontal-timeline">
+            
+                    <ul class="list-inline items">
+                      <li class="list-inline-item items-list">
+                        <div class="px-4">
+                          <div class="event-date badge bg-info">2 June</div>
+                          <h5 class="pt-2">Event One</h5>
+                          <p class="text-muted">It will be as simple as occidental in fact it will be Occidental Cambridge
+                            friend</p>
+                          <div>
+                            <a href="#" data-mdb-ripple-init class="btn btn-primary btn-sm">Read more</a>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-inline-item items-list">
+                        <div class="px-4">
+                          <div class="event-date badge bg-success">5 June</div>
+                          <h5 class="pt-2">Event Two</h5>
+                          <p class="text-muted">Everyone realizes why a new common language one could refuse translators.
+                          </p>
+                          <div>
+                            <a href="#" data-mdb-ripple-init class="btn btn-primary btn-sm">Read more</a>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-inline-item items-list">
+                        <div class="px-4">
+                          <div class="event-date badge bg-danger">7 June</div>
+                          <h5 class="pt-2">Event Three</h5>
+                          <p class="text-muted">If several languages coalesce the grammar of the resulting simple and
+                            regular</p>
+                          <div>
+                            <a href="#" data-mdb-ripple-init class="btn btn-primary btn-sm">Read more</a>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-inline-item items-list">
+                        <div class="px-4">
+                          <div class="event-date badge bg-warning">8 June</div>
+                          <h5 class="pt-2">Event Four</h5>
+                          <p class="text-muted">Languages only differ in their pronunciation and their most common words.
+                          </p>
+                          <div>
+                            <a href="#" data-mdb-ripple-init class="btn btn-primary btn-sm">Read more</a>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+            
+                  </div>
+            
+                </div>
+              </div>
+            
             </div>
-            <div id="xtt" class="container tab-pane fade"><br>
-              <!-- <h3>Điều kiện xét tuyển thẳng</h3> -->
-              <p><p class="mb-0">
-                a) Đã tốt nghiệp hoặc đã đủ điều kiện công nhận tốt nghiệp đại học (hoặc trình độ tương đương trở lên) trong thời gian không quá 02 năm tính đến ngày đăng ký dự tuyển, hạng tốt nghiệp từ Khá trở lên, ngành phù hợp với ngành đăng ký dự tuyển;
-                <br>
-                b) Đáp ứng một trong các yêu cầu về năng lực ngoại ngữ sau:
-                <br>
-              - Bằng tốt nghiệp trình độ đại học trở lên ngành Ngôn ngữ Anh; hoặc bằng tốt nghiệp trình độ đại học trở lên mà chương trình được thực hiện chủ yếu bằng tiếng Anh;
-              <br>
-              - Bằng tốt nghiệp trình độ đại học trở lên do Học viện Ngân hàng cấp trong thời gian không quá 02 năm tính đến ngày đăng ký dự tuyển mà chuẩn đầu ra của chương trình đã đáp ứng yêu cầu ngoại ngữ đạt trình độ Bậc 3 trở lên theo Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam;
-              <br>
-              - Một trong các văn bằng hoặc chứng chỉ ngoại ngữ đạt trình độ tương đương Bậc 3 trở lên theo Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam quy định tại Phụ lục số 01 hoặc các chứng chỉ tương đương khác do Bộ Giáo dục và Đào tạo công bố, còn hiệu lực tính đến ngày đăng ký dự tuyển.
-            </p>
-            </div>
-            <div id="xths" class="container tab-pane fade"><br>
-              <!-- <h3>Điều kiện xét tuyển theo hồ sơ</h3> -->
-              <p>a) Phương thức xét tuyển theo hồ sơ áp dụng đối với những ứng viên không đáp ứng điều kiện xét tuyển thẳng quy định tại mục 4.2 trên.
-                <br>
-                b) Ứng viên phải làm 01 bài luận liên quan đến ngành đăng ký dự tuyển. Quy định cụ thể về bài luận xem tại Phụ lục 4 trong thông báo tuyển sinh sau đại học.
-                <br>
-                c) Ứng viên phải tham dự kỳ thi đánh giá năng lực ngoại ngữ do Học viện Ngân hàng tổ chức. Ứng viên được miễn thi nếu đáp ứng một trong các yêu cầu quy định tại điểm b mục 4.2.</p>
-            </div>
-          </div>           
+            
+          <!--/div-->
         </div>
       </section>  
       <!-- Chuyên ngành phân tích kinh doanh-->
-      <section class="section section-md section-cta" style="background-color:rgb(37, 3, 114);">
+      <section class="section section-md section-cta" style="background-color:dodgerblue;">
         <div class="container">
           <div class="row row-30 align-items-center justify-content-center justify-content-xl-between">
-            <div class="col-lg-7 col-xl-10 text-center text-xl-left"  >
-              <h4 style="color:white"><span class="font-weight-bold"> Phân tích kinh doanh </span><br class="d-xxl-none"><span class="font-weight-normal">- Xu hướng thời đại kinh tế số!</p>
+            <div class="col-lg-7 col-xl-10 text-center text-xl-left">
+              <h4><span class="font-weight-bold"> Phân tích kinh doanh </span><br class="d-xxl-none"><span class="font-weight-normal">- Xu hướng thời đại kinh tế số!</p>
             </div>
             <div class="col-xl-2 text-center"><a class="button button-primary" href="#">Truy cập ngay</a></div>
           </div>
         </div>
       </section>
+
       <!-- Phân tích kinh doanh-->
       <section class="section-md bg-default text-center" id="portfolio">
         <div class="container">
-          <h4 class="heading-decorated" style="background-color: rgb(176, 210, 222); width:60%; margin-left: 20%;  border-radius: 10px;">
-            Chuyên ngành Phân tích kinh doanh</h4>
+          <h4 class="heading-decorated">Phân tích kinh doanh</h4>
           <div class="isotope-wrap row row-70">
             <div class="col-sm-12">
               <ul class="list-nav isotope-filters isotope-filters-horizontal">
@@ -441,12 +358,13 @@
                 <li><a data-isotope-filter="Category 2" data-isotope-group="gallery" href="#">Xét tuyển</a></li>
               </ul>
               <div>
-                <img src="images/itde/Phân tích kinh doanh.png">
+                <img src="images/Phantichkinhdoanh.jpg">
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <!-- Chuyên ngành Quản trị hệ thống thông tin-->
       <section class="section section-md section-cta" style="background-color:tomato;">
         <div class="container">
@@ -458,6 +376,7 @@
           </div>
         </div>
       </section>
+
       <!-- Quản trị hệ thống thông tin-->
       <section class="section-md bg-default text-center" id="portfolio">
         <div class="container">
@@ -470,7 +389,7 @@
                 <li><a data-isotope-filter="Category 2" data-isotope-group="gallery" href="#">Xét tuyển</a></li>
               </ul>
               <div>
-                <img src="images/itde/Quản trị hệ thống thông tin.png">
+                <img src="images/Phantichkinhdoanh.jpg">
               </div>
             </div>
           </div>
@@ -486,6 +405,7 @@
           <div class="group-lg group-middle"><a class="button button-black" href="https://itde.hvnh.edu.vn/"> Tìm hiểu về chúng tôi </a></div>
         </div>
       </section>
+
       <!-- Các hoạt động của khoa-->
       <section class="section-md bg-gray-lighter text-center" id="features">
         <div class="container">
@@ -551,104 +471,8 @@
           </div>
         </div>
       </section>
-    <!-- Bạn nhận dudowwjc gì sau khoa shocj-->
-    <section class="section-md bg-gray-lighter text-center" style="background-color: rgb(185, 182, 191); padding-top:50px;">
-      <div class="container">
-        <h4 class="heading-decorated">Bạn nhận được gì sau khóa học</h4>
-        <div class="row row-30 justify-content-center offset-top-2">
-          <div class="col-sm-10 col-lg-6"><img src="images/Sinhvien.jpg" alt="" width="650" height="495"/>
-          </div>
-          <div class="col-sm-10 col-lg-6">
-            <!-- Blurb circle-->
-            <article class="blurb blurb-circle">
-              <div class="unit flex-row unit-spacing-md wow " data-wow-delay="0.1s">
-                <div class="unit-left">
-                  <div class="blurb-circle__icon"><span class="icon linearicons-sun"></span></div>
-                </div>
-                <div class="unit-body">
-                  <p class="blurb__title heading-6">Kiến thức chuyên sâu:</p>
-                  <p>Hiểu biết toàn diện và sâu rộng về các khía cạnh khác nhau của phân tích kinh doanh hay quản trị hệ thống thông tin hiện đại</p>
-                </div>
-              </div>
-            </article>
-            <!-- Blurb circle-->
-            <article class="blurb blurb-circle">
-              <div class="unit flex-row unit-spacing-md wow " data-wow-delay="0.2s">
-                <div class="unit-left">
-                  <div class="blurb-circle__icon"><span class="icon linearicons-city"></span></div>
-                </div>
-                <div class="unit-body">
-                  <p class="blurb__title heading-6">Kiến thức về công nghệ mới:</p>
-                  <p> Cập nhật với các công nghệ mới nhất trong lĩnh vực quản trị hệ thống thông tin và phân tích kinh doanh, như trí tuệ nhân tạo, học máy, và blockchain...</p>
-                </div>
-              </div>
-            </article>
-            <!-- Blurb circle-->
-            <article class="blurb blurb-circle">
-              <div class="unit flex-row unit-spacing-md wow " data-wow-delay="0.3s">
-                <div class="unit-left">
-                  <div class="blurb-circle__icon"><span class="icon linearicons-lighter"></span></div>
-                </div>
-                <div class="unit-body">
-                  <p class="blurb__title heading-6">Kỹ năng tư duy chiến lược:</p>
-                  <p>Phát triển khả năng tư duy chiến lược và ra quyết định dựa trên dữ liệu và công nghệ để giải quyết các vấn đề của tổ chức trong thực tế.</p>
-                </div>
-              </div>
-            </article>
-            <!-- Blurb circle-->
-            <article class="blurb blurb-circle">
-              <div class="unit flex-row unit-spacing-md wow " data-wow-delay="0.3s">
-                <div class="unit-left">
-                  <div class="blurb-circle__icon"><span class="icon linearicons-hammer-wrench"></span></div>
-                </div>
-                <div class="unit-body">
-                  <p class="blurb__title heading-6">Kinh nghiệm thực tế:</p>
-                  <p>Thực hiện các dự án thực tế, làm việc với dữ liệu thật và các tình huống kinh doanh cụ thể, giúp bạn áp dụng lý thuyết vào thực tiễn.</p>
-                </div>
-              </div>
-            </article>
-          <!-- Blurb circle-->
-          <article class="blurb blurb-circle">
-            <div class="unit flex-row unit-spacing-md wow " data-wow-delay="0.3s">
-              <div class="unit-left">
-                <div class="blurb-circle__icon"><span class="icon linearicons-bag2"></span></div>
-              </div>
-              <div class="unit-body">
-                <p class="blurb__title heading-6">Cơ hội nghề nghiệp: </p>
-                <p>Kết nối với các giảng viên, bạn học, và chuyên gia trong ngành, mở rộng mạng lưới quan hệ và cơ hội nghề nghiệp.</p>
-              </div>
-            </div>
-          </article>
-          <!-- Blurb circle-->
-          <article class="blurb blurb-circle">
-            <div class="unit flex-row unit-spacing-md wow " data-wow-delay="0.3s">
-              <div class="unit-left">
-                <div class="blurb-circle__icon"><span class="icon linearicons-user"></span></div>
-              </div>
-              <div class="unit-body">
-                <p class="blurb__title heading-6">Phát triển cá nhân: </p>
-                <p> Nâng cao kỹ năng mềm như kỹ năng làm việc nhóm, kỹ năng giao tiếp, kỹ năng quản lý thời gian, và khả năng lãnh đạo.</p>
-              </div>
-            </div>
-          </article>
-          <!-- Blurb circle-->
-          <article class="blurb blurb-circle">
-            <div class="unit flex-row unit-spacing-md wow " data-wow-delay="0.3s">
-              <div class="unit-left">
-                <div class="blurb-circle__icon"><span class="icon linearicons-receipt"></span></div>
-              </div>
-              <div class="unit-body">
-                <p class="blurb__title heading-6">Bằng cấp uy tín: </p>
-                <p> Có được bằng thạc sĩ từ một tổ chức giáo dục uy tín, giúp bạn tăng cường khả năng cạnh tranh trong thị trường lao động.</p>
-              </div>
-            </div>
-          </article>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- Một số câu hỏi-->
-      <section class="section-md bg-default text-center"  >
+      <section class="section-md bg-default text-center">
         <div class="container">
           <h4 class="heading-decorated">Một số câu hỏi</h4>
           <div class="row justify-content-md-center justify-content-lg-between row-50 align-items-center text-left wow fadeIn" data-wow-delay="0.3s">
@@ -657,53 +481,43 @@
                       <!-- Bootstrap card-->
                       <div class="card card-custom">
                         <div class="card-custom-heading" id="accordionHeading1" role="tab">
-                          <p class="card-custom-title" >
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#accordionCollapse1" aria-controls="accordionCollapse1">
-                            <span class="icon linearicons-question-circle"></span>Thời hạn đăng ký và nộp hồ sơ xét tuyển là khi nào và thông tin chi tiết về khóa học?</a>
-                          </p>
+                          <h5 class="card-custom-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#accordionCollapse1" aria-controls="accordionCollapse1">What are the advantages of purchasing a website template?</a>
+                          </h5>
                         </div>
                         <div class="card-custom-collapse collapse" id="accordionCollapse1" role="tabpanel" aria-labelledby="accordionHeading1">
                           <div class="card-custom-body">
-                            <p>Thời hạn đăng ký và nộp hồ sơ xét tuyển kỳ tháng 09/2024 và thông tin chi tiết về khóa học: Danh sách môn học, học phí... em xem chi tiết tại link sau: https://itde.hvnh.edu.vn/thac_si</p>
+                            <p>The major advantage is price: You get a high quality design for just $20-$70. You don’t have to hire a web designer or web design studio. Second advantage is time frame: It usually takes 5-15 days for a good designer to produce a web page of such quality.</p>
                           </div>
                         </div>
                       </div>
                       <!-- Bootstrap card-->
-                      <div class="card card-custom" >
+                      <div class="card card-custom">
                         <div class="card-custom-heading" id="accordionHeading2" role="tab">
-                          <p class="card-custom-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" 
-                            href="#accordionCollapse2" aria-controls="accordionCollapse2"> 
-                            <span class="icon linearicons-question-circle"></span> Em chuyên ngành lúc đại học là đúng chuyên ngành (Tốt nghiệp loại Khá), 
-                            , thầy/cô có thể cho em 1 số thông tin tư vấn đăng ký và thi tuyển vào chương trình học Thạc Sỹ của trường mình?</a>
-                          </p>
+                          <h5 class="card-custom-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#accordionCollapse2" aria-controls="accordionCollapse2">Do you provide any scripts with your templates or could you do some custom programming?</a>
+                          </h5>
                         </div>
                         <div class="card-custom-collapse collapse" id="accordionCollapse2" role="tabpanel" aria-labelledby="accordionHeading2">
                           <div class="card-custom-body">
-                            <p>Em học đúng chuyên ngành HTTTQL nhưng do đã tốt nghiệp trên 2 năm nên không ở diện xét tuyển thẳng mà xét duyệt hồ sơ, em không phải học thêm môn học bổ túc nào nữa nhé. Em sẽ viết 01 bài luận gửi kèm với hồ sơ. Link nộp hồ sơ: https://forms.gle/d75fmjpLA45vUHAf9</p>
+                            <p>Our templates do not include any additional scripts. Newsletter subscriptions, search fields, forums, image galleries (in HTML versions of Flash products) are inactive. Basic scripts can be easily added at zemez.io If you are not sure that the element you’re interested in is active please contact our Support Chat for clarification.</p>
                           </div>
                         </div>
                       </div>
                       <!-- Bootstrap card-->
-                      <div class="card card-custom"  >
+                      <div class="card card-custom">
                         <div class="card-custom-heading" id="accordionHeading3" role="tab">
-                          <p class="card-custom-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" 
-                            href="#accordionCollapse3" aria-controls="accordionCollapse3"> <span class="icon linearicons-question-circle"></span>Hiện em chưa có 
-                            bằng ngoại ngữ đạt điều kiện xét tuyển trong danh mục chứng chỉ ngoại ngữ theo quy định. 
-                            Vậy trường mình có tổ chức thi và cấp chứng chỉ ngoại ngữ không ạ? 
-                      </a>
-                          </p>
+                          <h5 class="card-custom-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#accordionCollapse3" aria-controls="accordionCollapse3">In what formats are your templates available?</a>
+                          </h5>
                         </div>
                         <div class="card-custom-collapse collapse" id="accordionCollapse3" role="tabpanel" aria-labelledby="accordionHeading3">
                           <div class="card-custom-body">
-                            <p> Về bằng ngoại ngữ, trường mình sẽ tổ chức thi đầu vào. Em nộp hồ sơ bình thường, sau đó trường sẽ tổng hợp các bạn thi ngoại ngữ đầu vào và thông báo lịch ôn lịch thi tới email của các bạn.</p>
+                            <p>Website templates are available in Photoshop and HTML formats. Fonts are included with Photoshop file. In most templates HTML is compatible with Adobe®, Dreamweaver® and Microsoft Frontpage®.</p>
                           </div>
                         </div>
                       </div>
               </div>
             </div>
             <div class="col-md-7 col-lg-5">
-              <figure><img src="images/sv7.jpg" alt="" width="555" height="500"/>
+              <figure><img src="images/home-variant-3-555x500.jpg" alt="" width="555" height="500"/>
               </figure>
             </div>
           </div>
@@ -711,6 +525,38 @@
       </section>
 
      
+
+      
+
+      <!-- get a quote-->
+      <section class="bg-gray-lighter object-wrap" id="contacts">
+        <div class="section-lg">
+          <div class="container">
+            <div class="row justify-content-end">
+              <div class="col-lg-5">
+                <h4 class="heading-decorated">Liên hệ</h4>
+                <!-- RD Mailform-->
+                <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                  <div class="form-wrap">
+                    <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
+                    <label class="form-label" for="contact-name">Họ tên</label>
+                  </div>
+                  <div class="form-wrap">
+                    <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
+                    <label class="form-label" for="contact-email">E-mail</label>
+                  </div>
+                  <div class="form-wrap">
+                    <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                    <label class="form-label" for="contact-message">Nội dung tin nhắn</label>
+                  </div>
+                  <button class="button button-primary" type="submit">Gửi</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="object-wrap__body object-wrap__body-sizing-1 object-wrap__body-md-left bg-image" style="background-image: url(images/itde/anh_tap_the_gv_2.jpg)"></div>
+      </section>
 
      
       <!-- Page Footer-->
